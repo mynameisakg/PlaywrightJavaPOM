@@ -9,6 +9,8 @@ public class HomePage {
 	String searchField = "div#search input";
 	String searchButton = "div#search button";
 	String searchResultHeaderText = "div#content h1";
+	String loginLink = "a:text('Login')";
+	String myAccountDropDown = "//a[@title='My Account']";
 	
 	public HomePage(Page page) {
 		this.page = page;
@@ -32,6 +34,12 @@ public class HomePage {
 		String searchHeader = page.textContent(searchResultHeaderText);
 		System.out.println("The search header is : " + searchHeader);
 		return searchHeader;
+	}
+	
+	public LoginPage navigateToLoginPage() {
+		page.locator(myAccountDropDown).click();
+		page.locator(loginLink).click();
+		return new LoginPage(page);
 	}
 
 }
