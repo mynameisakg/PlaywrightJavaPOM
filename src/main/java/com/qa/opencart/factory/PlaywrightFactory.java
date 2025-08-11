@@ -47,27 +47,22 @@ public class PlaywrightFactory {
 		System.out.println("Browser name is : " + browserName);
 		
 		tlPlaywright.set(Playwright.create());
-//		playwright = Playwright.create();
 		
 		switch (browserName.toLowerCase()) {
 		case "chromium": {
 			tlBrowser.set(getPlaywright().chromium().launch(new BrowserType.LaunchOptions().setHeadless(false)));
-//			browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
 			break;
 		}
 		case "firefox": {
 			tlBrowser.set(getPlaywright().firefox().launch(new BrowserType.LaunchOptions().setHeadless(false)));
-//			browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
 			break;
 		}
 		case "safari": {
 			tlBrowser.set(getPlaywright().webkit().launch(new BrowserType.LaunchOptions().setHeadless(false)));
-//			browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(false));
 			break;
 		}
 		case "chrome": {
 			tlBrowser.set(getPlaywright().chromium().launch(new LaunchOptions().setChannel("chrome").setHeadless(false)));
-//			browser = playwright.chromium().launch(new LaunchOptions().setChannel("chrome").setHeadless(false));
 			break;
 		}
 		default:
@@ -75,11 +70,8 @@ public class PlaywrightFactory {
 			break;
 		}
 		
-//		browserContext = browser.newContext();
 		tlBrowserContext.set(getBrowser().newContext());
-//		page = browserContext.newPage();
 		tlPage.set(getBrowserContext().newPage());
-//		page.navigate(prop.getProperty("url").trim());
 		getPage().navigate(prop.getProperty("url").trim());
 
 		return getPage();
