@@ -63,7 +63,7 @@
                     <configuration>
                         <!-- Use your TestNG suite file -->
                         <suiteXmlFiles>
-                            <suiteXmlFile>src/test/resource/testrunners/testng_regression.xml</suiteXmlFile>
+                            <suiteXmlFile>src/test/resources/testrunners/testng_regression.xml</suiteXmlFile>
                         </suiteXmlFiles>
 
                         <!-- Match TestNG parallel mode -->

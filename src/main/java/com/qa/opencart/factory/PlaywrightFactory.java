@@ -85,7 +85,7 @@ public class PlaywrightFactory {
 	 * */
 	public Properties init_props() {
 		try {
-			FileInputStream ip = new FileInputStream("./src/test/resource/config/config.properties");
+			FileInputStream ip = new FileInputStream("./src/test/resources/config/config.properties");
 			prop = new Properties();
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
