@@ -38,5 +38,4 @@ public class HomePageTest extends BaseTest{
 		String actaulText = homePage.doSearch(productName);
 		Assert.assertEquals(actaulText, "Search - " + productName);
 	}
-	
 }
